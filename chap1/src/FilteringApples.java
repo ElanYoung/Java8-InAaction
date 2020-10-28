@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class FilteringApples {
     public static class Apple {
@@ -58,6 +59,12 @@ public class FilteringApples {
         // [Apple{color='green', weight=155}]
         List<Apple> heavyApples2 = filterApples(inventory, (Apple a) -> a.getWeight() > 150);
         System.out.println(heavyApples2);
+
+        List<Apple> heavyApples3 = inventory.parallelStream().filter((Apple a) -> a.getWeight() > 150).collect(Collectors.toList());
+        System.out.println(heavyApples3);
+
+        List<Apple> heavyApples4 = inventory.parallelStream().filter((Apple a) -> a.getWeight() > 150).collect(Collectors.toList());
+        System.out.println(heavyApples4);
 
         // []
         List<Apple> weirdApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 ||
