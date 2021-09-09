@@ -20,7 +20,17 @@
         <module>chap1</module>
         <module>chap2</module>
         <module>chap3</module>
+        <module>chap4</module>
+        <module>stream</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
