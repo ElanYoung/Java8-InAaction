@@ -10,13 +10,13 @@ public class ExecuteAround {
     }
 
     public static String processFile(BufferedReaderProcessor p) throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader("chap3\\data.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("chap3/src/main/resources/data.txt"))) {
             return p.process(br);
         }
     }
 
     public static String processFileLimited() throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader("chap3\\data.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("chap3/src/main/resources/data.txt"))) {
             return br.readLine();
         }
     }
